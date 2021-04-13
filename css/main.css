@@ -1,0 +1,123 @@
+/* declarando variáveis no css - declara dentro do elemento raiz/root*/
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+:root {
+    --yellow: #ffc107;
+    --dark: #343a40;
+    --secondary:#c9ced3;
+    --white: #f8f9fa;
+    --orange: #fd7e14;
+    --black:#141414;
+    --font-logo: Indie Flower, sans-serif, Helvetica, Roboto;
+}
+
+/*fazendo o reset css para que a pagina se comporte da mesma forma em qualquer navegador em que ela for inserida */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /* para que os elementos respeitem o tamanho do container*/
+}
+
+/*declarando o estilo básico de toda a página*/
+
+body {
+    background:var(--dark);
+    color: var(--white);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+}
+
+.logo {
+    color: var(--orange);
+    font-family: var(--font-logo);
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row; /* o default do display flex já é row, está sendo declarado para questao de semantica*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--white);
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: var(--secondary)
+}
+
+/*estilo relacionado ao filme principal*/
+
+.media-principal {
+    height: 400px;
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50) 100%), url('/img/anne-bkg.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*sempre se inverte dependendo do flex-diretion*/
+    align-items: flex-start;/*sempre se inverte dependendo do flex-diretion*/
+}
+
+.media-principal .descricao {
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.media-principal .titulo {
+    font-size: 40px;
+    margin-top: 15%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+}
+
+.botao {
+    background-color: rgba(228, 199, 172, .50); /*definindo elemendo com transparência*/
+    border: none;
+    color: var(--white);
+
+    padding: 15px 15px;
+    margin-right: 15px;
+    
+    font-size: 12px;
+    
+    cursor: pointer;
+
+    transition: .3s ease all;
+}
+
+.botao:hover {
+    color:var(--yellow);
+    background-color:var(--white);
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.media-principal .container {
+    width: 70%;
+
+}
+
+.box-filme {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.carousel-filmes {
+    margin-top: 8px;
+}
+
+
+
+
